@@ -1,0 +1,79 @@
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\appsettings.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Prueba _ API.staticwebassets.endpoints.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Prueba _ API.exe
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Prueba _ API.deps.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Prueba _ API.runtimeconfig.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Prueba _ API.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Prueba _ API.pdb
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Humanizer.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.csproj.AssemblyReference.cache
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.AssemblyInfoInputs.cache
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.AssemblyInfo.cs
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.csproj.CoreCompileInputs.cache
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.sourcelink.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\scopedcss\bundle\Prueba _ API.styles.css
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\staticwebassets.build.json.cache
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _.C7CA3DCD.Up2Date
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\refint\Prueba _ API.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.pdb
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.genruntimeconfig.cache
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\ref\Prueba _ API.dll
