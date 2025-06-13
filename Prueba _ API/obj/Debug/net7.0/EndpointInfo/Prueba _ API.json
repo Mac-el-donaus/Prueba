@@ -50,22 +50,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaCreateDto"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaCreateDto"
               }
             }
           }
@@ -278,22 +278,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaUpdateDto"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaUpdateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaUpdateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/PruebaDto"
+                "$ref": "#/components/schemas/PruebaUpdateDto"
               }
             }
           }
@@ -469,6 +469,41 @@
         },
         "additionalProperties": { }
       },
+      "PruebaCreateDto": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "detalle": {
+            "type": "string",
+            "nullable": true
+          },
+          "tarifa": {
+            "type": "number",
+            "format": "double"
+          },
+          "ocupantes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "metrosCuadrados": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "amenidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagenUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PruebaDto": {
         "type": "object",
         "properties": {
@@ -502,6 +537,45 @@
             "nullable": true
           },
           "imagenUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PruebaUpdateDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "detalle": {
+            "type": "string",
+            "nullable": true
+          },
+          "tarifa": {
+            "type": "number",
+            "format": "double"
+          },
+          "ocupantes": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "metrosCuadrados": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imagenUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "amenidad": {
             "type": "string",
             "nullable": true
           }

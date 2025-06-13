@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,10 +15,12 @@ namespace Prueba___API.Controllers
     {
         private readonly ILogger<PruebaController> _logger;
         private readonly ApplicationDbcontext _db;
-        public PruebaController(ILogger<PruebaController> logger, ApplicationDbcontext db)
+        private readonly IMapper _mapper;
+        public PruebaController(ILogger<PruebaController> logger, ApplicationDbcontext db, IMapper mapper)
         {
             _logger = logger;
             _db = db;
+            _mapper = mapper;
         }
 
         private object pruebaDto;
@@ -25,10 +28,13 @@ namespace Prueba___API.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<IEnumerable<PruebaDto>> GetPruebas()
+        public async Task<ActionResult<IEnumerable<PruebaDto>>> GetPruebasAsync()
         {
             _logger.LogInformation("Obtener las Villas");
-            return Ok(_db.Prueba.ToList());
+
+            IEnumerable<Prueba> pruebalist = await _db.Prueba.ToListAsync();
+
+            return Ok(_mapper.Map<IEnumerable<PruebaDto >> (pruebalist));
         }
 
 
@@ -37,7 +43,7 @@ namespace Prueba___API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<PruebaDto> GetPrueba(int id)
+        public async Task<ActionResult<PruebaDto>> GetPrueba(int id)
         {
             if (id == 0)
             {
@@ -45,99 +51,79 @@ namespace Prueba___API.Controllers
                 return BadRequest();
             }
             //var prueba = PruebaStore.PruebaList.FirstOrDefault(v => v.Id == id);
-            var prueba = _db.Prueba.FirstOrDefault(v => v.Id == id);
+            var prueba = await _db.Prueba.FirstOrDefaultAsync(v => v.Id == id);
             if (prueba == null)
             {
                 return NotFound();
             }
-            return Ok(prueba);
+            return Ok(_mapper.Map<PruebaDto>(prueba));
         }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<PruebaDto> CrearPrueba([FromBody] PruebaDto pruebaDto)
+        public async Task<ActionResult<PruebaDto>> CrearPrueba([FromBody] PruebaCreateDto createDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (_db.Prueba.FirstOrDefault(v => v.Nombre.ToLower() == pruebaDto.Nombre.ToLower()) != null)
+            if (await _db.Prueba.FirstOrDefaultAsync(v=>v.Nombre.ToLower() == createDto.Nombre.ToLower()) != null)
             {
                 ModelState.AddModelError("NombreExiste", "La villa con ese nombre ya existe!");
                 return BadRequest(ModelState);
             }
 
-            if (pruebaDto == null)
+            if (createDto == null)
             {
-                return BadRequest(pruebaDto);
+                return BadRequest(createDto);
             }
-            if (pruebaDto.Id > 0)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-            Prueba modelo = new()
-            {
-                Nombre = pruebaDto.Nombre,
-                Detalle = pruebaDto.Detalle,
-                ImagenUrl = pruebaDto.ImagenUrl,
-                Ocupantes = pruebaDto.Ocupantes,
-                Tarifa = pruebaDto.Tarifa,
-                MetrosCuadrados = pruebaDto.MetrosCuadrados,
-                Amenidad = pruebaDto.Amenidad,
-            };
 
-            _db.Prueba.Add(modelo);
-            _db.SaveChanges();
+            Prueba modelo = _mapper.Map<Prueba>(createDto);
 
-            return CreatedAtRoute("GetPrueba", new { id = pruebaDto.Id }, pruebaDto);
+            await _db.Prueba.AddAsync(modelo);
+            await _db.SaveChangesAsync();
+
+            return CreatedAtRoute("GetPrueba", new { id = modelo.Id }, modelo);
         }
         [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult DeletePrueba(int id)
+        public async Task<IActionResult> DeletePrueba(int id)
         {
             if (id == 0)
             {
                 return BadRequest();
             }
-            var prueba = _db.Prueba.FirstOrDefault(v => v.Id == id);
+            var prueba =await _db.Prueba.FirstOrDefaultAsync(v => v.Id == id);
             if (prueba == null)
             {
                 return NotFound();
             }
             _db.Prueba.Remove(prueba);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             return NoContent();
         }
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult UpdatePrueba(int id, [FromBody] PruebaDto  pruebaDto)
+        public async Task<IActionResult> UpdatePrueba(int id, [FromBody] PruebaUpdateDto  updateDto)
         {
-            if (pruebaDto == null || id != pruebaDto.Id)
+            if (updateDto == null || id != updateDto.Id)
             {
                 return BadRequest();
             }
             //var prueba = PruebaStore.PruebaList.FirstOrDefault(v => v.Id == id);
 
-            Prueba prueba = new()
-            {
-                Id = pruebaDto.Id,
-                Nombre = pruebaDto.Nombre,
-                Detalle = pruebaDto.Detalle,
-                ImagenUrl = pruebaDto.ImagenUrl,
-                Ocupantes = pruebaDto.Ocupantes,
-                Tarifa = pruebaDto.Tarifa,
-                MetrosCuadrados = pruebaDto.MetrosCuadrados,
-                Amenidad = pruebaDto.Amenidad
-            };
-            _db.Prueba.Update(prueba);
-            _db.SaveChanges();
+            Prueba modelo = _mapper.Map<Prueba>(updateDto);
+
+            
+            _db.Prueba.Update(modelo);
+            await _db.SaveChangesAsync();
             return NoContent();
         }
 
@@ -145,26 +131,17 @@ namespace Prueba___API.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public IActionResult UpdatePartialPrueba(int id, JsonPatchDocument<PruebaDto> patchDto)
+        public async Task<IActionResult> UpdatePartialPrueba(int id, JsonPatchDocument<PruebaUpdateDto> patchDto)
         {
             if (patchDto == null || id == 0)
             {
                 return BadRequest();
             }
-            var prueba = _db.Prueba.AsNoTracking().FirstOrDefault(v => v.Id == id);
+            var prueba =await _db.Prueba.AsNoTracking().FirstOrDefaultAsync(v => v.Id == id);
 
-            PruebaDto pruebaDto = new()
-            {
-                Id = prueba.Id,
-                Nombre = prueba.Nombre,
-                Detalle = prueba.Detalle,
-                ImagenUrl = prueba.ImagenUrl,
-                Ocupantes = prueba.Ocupantes,
-                Tarifa = prueba.Tarifa,
-                MetrosCuadrados = prueba.MetrosCuadrados,
-                Amenidad = prueba.Amenidad
-            };
+            PruebaUpdateDto pruebaDto = _mapper.Map<PruebaUpdateDto>(prueba);
 
+           
             if (prueba == null) return BadRequest();
              
             patchDto.ApplyTo(pruebaDto, ModelState);
@@ -174,20 +151,12 @@ namespace Prueba___API.Controllers
                 return BadRequest(ModelState);
             }
 
-            Prueba modelo = new()
-            {
-                Id = pruebaDto.Id,
-                Nombre = pruebaDto.Nombre,
-                Detalle = pruebaDto.Detalle,
-                ImagenUrl = pruebaDto.ImagenUrl,
-                Ocupantes = pruebaDto.Ocupantes,
-                Tarifa = pruebaDto.Tarifa,
-                MetrosCuadrados = pruebaDto.MetrosCuadrados,
-                Amenidad = pruebaDto.Amenidad
-            };
+            Prueba modelo = _mapper.Map<Prueba>(pruebaDto);
+
+          
 
             _db.Prueba.Update(modelo);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
             return NoContent();
         }
 

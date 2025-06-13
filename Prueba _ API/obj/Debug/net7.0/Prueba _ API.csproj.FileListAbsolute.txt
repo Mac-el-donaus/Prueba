@@ -77,3 +77,5 @@ C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\refint\Pr
 C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.pdb
 C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\Prueba _ API.genruntimeconfig.cache
 C:\Users\presentador\source\repos\Prueba\Prueba _ API\obj\Debug\net7.0\ref\Prueba _ API.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\presentador\source\repos\Prueba\Prueba _ API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

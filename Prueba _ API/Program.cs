@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Prueba___API;
 using Prueba___API.Datos;
 
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseSystemDataSqlClient", false);
@@ -27,6 +28,9 @@ builder.Services.AddDbContext<ApplicationDbcontext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.dotnet --list-sdks

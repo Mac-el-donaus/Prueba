@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Prueba___API.Controllers.PruebaController",
-    "Method": "GetPruebas",
+    "Method": "GetPruebasAsync",
     "RelativePath": "api/Prueba",
     "HttpMethod": "GET",
     "IsController": true,
@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pruebaDto",
-        "Type": "Prueba___API.Modelos.Dto.PruebaDto",
+        "Name": "createDto",
+        "Type": "Prueba___API.Modelos.Dto.PruebaCreateDto",
         "IsRequired": true
       }
     ],
@@ -113,8 +113,8 @@
         "IsRequired": true
       },
       {
-        "Name": "pruebaDto",
-        "Type": "Prueba___API.Modelos.Dto.PruebaDto",
+        "Name": "updateDto",
+        "Type": "Prueba___API.Modelos.Dto.PruebaUpdateDto",
         "IsRequired": true
       }
     ],
